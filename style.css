@@ -1,0 +1,136 @@
+/*
+Theme Name: Oriental Writing
+Theme URI: http://pure-essence.net/2013/04/26/child-theme-for-oriental-summer-day
+Author: Ying Zhang
+Author URI: http://regretless.com/
+Description: Oriental writing is a child theme for oriental.
+Version: 1.0.0
+Tags: light, pink, red, green, blue, two-column, left-sidebar, flexible-width, threaded-comments, sticky-post, post-formats
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+template: oriental
+*/
+
+@import url('../oriental/style.css');
+
+/* =========================================================================
+ *   Oriental Writing
+ * ========================================================================= */
+
+/* customized by pure-essence.net */
+html body {
+	background: #feffef url(images/bk.png) repeat;
+	color: #694f10;
+}
+
+a {
+	color: #7c7a02;
+}
+a:hover {
+	color: #fa0405;
+}
+
+#page {
+	background-image: url(images/meiTop.png);
+	background-repeat: no-repeat;
+	background-position: left -100px;
+	position: relative;
+}
+
+#page:before {
+	content: url(images/meiLeft.png);
+	position: absolute;
+	bottom: 0;
+	left: -10px;
+	z-index: 10;
+}
+
+#page:after {
+	content: url(images/meiLowerRight.png);
+	position: absolute;
+	bottom: 0;
+	right: -200px;
+}
+
+#masthead {
+	width: auto;
+	margin: 0 0 0 200px;
+	position: relative;
+	padding-top: 50px;
+}
+
+#masthead:after {
+	content: url(images/cloudsCranes.png);
+	position: absolute;
+	right: -200px;
+	top: 0;
+}
+
+#nav-menu-wrapper {
+	margin: 0 0 0 200px;
+}
+
+#main {
+	background: none;
+	width: auto;
+	padding: 0 0 0 200px;
+}
+
+#primary {
+	width: 627px;
+	float: left;
+	background: none;
+}
+
+#content {
+	background-color: #f8efd3;
+	background-image: none;
+	position: relative;
+	margin-top: 50px;
+}
+
+#content:before {
+	content: url(images/paperTop.png);
+	position: absolute;
+	top: -60px;
+	left: 0;
+}
+
+#content:after {
+	content: url(images/paperBottom.png);
+	position: absolute;
+	bottom: -60px;
+	left: 0;
+}
+
+#secondary {
+	margin-left: 650px;
+	padding-top: 219px;
+	width: auto;
+	position: relative;
+}
+
+#secondary:after {
+	content: url(images/teaKettle.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+footer#colophon {
+	background: none;
+	width: 627px;
+	margin: 0 0 0 200px;
+	height: auto;
+	padding-top: 50px;
+	color: #000;
+}
+
+.site-info {
+	line-height: normal;
+	text-align: center;
+}
+
+footer a {
+	color: #000;
+}
