@@ -5,7 +5,7 @@ Author: Ying Zhang
 Author URI: http://regretless.com/
 Description: Oriental writing is a child theme for oriental.
 Version: 1.0.0
-Tags: light, pink, red, green, blue, two-column, left-sidebar, flexible-width, threaded-comments, sticky-post, post-formats
+Tags: fixed-width, two-columns, threaded-comments, sticky-post, microformats, right-sidebar, yellow, orange, red, custom-menu, editor-style, full-width-template
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 template: oriental
@@ -175,11 +175,13 @@ article.post {
 }
 
 .page-template-page-nosidebar-php #primary, 
-.attachment #primary {
+.attachment #primary, 
+.error404 #primary {
 	width: 627px;
 }
 .page-template-page-nosidebar-php footer#colophon, 
-.attachment footer#colophon {
+.attachment footer#colophon, 
+.error404 footer#colophon {
 	margin-left: 339px;
 }
 
@@ -212,6 +214,12 @@ article:nth-of-type(odd) .entry-title:after {
 	top: 20px;
 	left: -120px;
 }
+
+blockquote {
+	background-color: rgba(253,251,219,.5);
+	border: 0;
+}
+
 #comments {
 	background: none;
 }
@@ -224,8 +232,63 @@ h2.comments-title,
 	background: none;
 }
 li.comment, li.pingback, li.trackback {
-	border-bottom: 0;
+	border-bottom: 1px solid #d0be90;
+	padding: 10px;
 }
+ol.commentlist ul.children li, 
+ul.commentlist ul.children li {
+	border: 0;
+}
+ul.commentlist > li.comment > ul.children, ol.commentlist > li.comment > ul.children {
+	padding-left: 0;
+}
+.thread-odd {
+	background-color: transparent;
+}
+#comments .avatar {
+	border-radius: 50%;
+}
+.comment-author {
+	margin: 0;
+	padding: 0;
+	width: auto;
+	min-height: 0;
+}
+.comment-author cite.fn {
+	width: auto;
+	line-height: 40px;
+}
+.commentmetadata {
+	float: right;
+	line-height: 40px;
+}
+.children .comment-author cite.fn {
+	line-height: normal;
+}
+.children .commentmetadata {
+	float: none;
+	line-height: normal;
+	padding-left: 50px;
+}
+.comment-content {
+	clear: both;
+}
+
+button, input, select, textarea, #s {
+	background: rgba(255,255,255,.5);
+}
+#s {
+	padding: 3px;
+	border-radius: 3px;
+	width: 100%;
+}
+#searchsubmit {
+	display: none;
+}
+.wp-caption {
+	border-color: #d0be90;
+}
+
 h1.page-title {
 	padding: 1em 0.5em 0;
 }
