@@ -44,7 +44,6 @@ add_filter( 'infinite_scroll_credit', 'orientalWriting_footer_credits' );
  */
 function orientalWriting_scripts() {
 	wp_enqueue_style( 'googleFonts', '//fonts.googleapis.com/css?family=Molle:400italic|Satisfy|Source Sans Pro' );
-
 }
 add_action( 'wp_enqueue_scripts', 'orientalWriting_scripts' );
 

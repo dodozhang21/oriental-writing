@@ -136,7 +136,8 @@ textarea {
 }
 
 .main-navigation ul ul {
-	background-color: rgba(0,0,0,.8);;
+	background-color: rgba(0,0,0,.8);
+	border-left: 1px solid #000;
 }
 
 .main-navigation ul ul li.current_page_item a,
@@ -145,12 +146,10 @@ textarea {
 }
 
 .main-navigation a {
-	transition: font-size 400ms ease;
 }
 .main-navigation a:hover {
 	background: none;
-	font-size: 120%;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 small.postmetadata {
@@ -319,6 +318,10 @@ h1.page-title {
 	padding-top: 230px;
 	width: auto;
 	position: relative;
+}
+
+#secondary a:hover {
+	text-decoration: underline;
 }
 
 #secondary:after {
