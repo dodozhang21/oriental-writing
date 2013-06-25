@@ -6,7 +6,7 @@ version 1.0.0 - Hello world!
 
 --------------------------------------------------------------------------------
 For support, 
-visit http://pure-essence.net/2013/04/26/child-theme-for-oriental-summer-day
+visit http://pure-essence.net/2013/06/25/child-theme-for-oriental-oriental-writing
 
 
 --------------------------------------------------------------------------------
