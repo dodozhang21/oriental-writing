@@ -1,4 +1,4 @@
-Thank you for choosing the Summer Day Theme.
+Thank you for choosing the Oriental Writing Theme.
 
 Version History:
 
@@ -12,7 +12,7 @@ visit http://pure-essence.net/2013/04/26/child-theme-for-oriental-summer-day
 --------------------------------------------------------------------------------
  Licenses:
 --------------------------------------------------------------------------------
-Summer Day is a child theme of oriental
+Oriental Writing is a child theme of oriental
 oriental is licensed under the GPL.
 
 == Bundled Resources: Images ==
