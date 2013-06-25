@@ -31,6 +31,23 @@ a:hover {
 	color: #fa0405;
 }
 
+img {
+	border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+	word-wrap: break-word;
+}
+
+.entry-title,
+.entry-content,
+.entry-summary {
+	word-wrap: break-word;
+}
+
 #page {
 	background-image: url(images/meiTop.png);
 	background-repeat: no-repeat;
@@ -67,10 +84,9 @@ a:hover {
 	top: 0;
 }
 
-#masthead .site-title,
-#masthead .site-title a {
+#masthead h1.site-title a {
 	color: #000;
-	font-family: Molle, Garamond,Georgia,serif;
+	font-family: 'Molle', Garamond, Georgia, serif;
 }
 
 #masthead .site-description {
@@ -128,8 +144,13 @@ a:hover {
 	font-weight: bold;
 }
 
+.main-navigation a {
+	transition: font-size 400ms ease;
+}
 .main-navigation a:hover {
 	background: none;
+	font-size: 120%;
+	text-decoration: none;
 }
 
 small.postmetadata {
@@ -338,4 +359,120 @@ footer#colophon {
 
 footer a {
 	color: #000;
+}
+
+/* =Media Queries
+----------------------------------------*/
+
+/* --- Smartphones and small Tablet PCs --- */
+@media screen and (max-width:760px) {
+	#more {
+		display: block;
+		float: left;
+		padding: 0.3em 0.5em;
+	}
+	#main {
+		padding: 0;
+	}
+	#nav-menu-wrapper {
+		padding-bottom: 20px;
+	}
+	#page {
+		background-position: -50px -100px;
+	}
+	#masthead:after,
+	#page:before,
+	#page:after,
+	article:nth-of-type(2n+1) .entry-title:after {
+		content: '';
+		position: static;
+	}
+	#primary {
+		float: none;
+		margin: 0 auto;
+	}
+	.entry-content .oriental-post-thumbnail {
+		position: static;
+		margin: 10px 0;
+	}
+	#secondary {
+		margin: 0 auto;
+		padding-top: 50px;
+		width: 627px;
+	}
+	#s {
+		width: 80%;
+	}
+	#secondary:after {
+		content: '';
+	}
+	footer#colophon {
+		margin: 0 auto;
+		padding-top: 0;
+		width: auto;
+	}
+}
+
+@media screen and (max-width:650px) {
+	#more {
+		display: block;
+		float: left;
+		padding: 0.3em 0.5em;
+	}
+	#page {
+		background-position: -180px -100px;
+	}
+	#masthead {
+		margin: 0 0 0 180px;
+		padding-top: 40px;
+		font-size: 80%;
+	}
+	#masthead section {
+		margin-left: 0;
+		padding: 0;
+	}
+	#main {
+		padding: 0;
+	}
+	#nav-menu-wrapper {
+		padding-bottom: 0;
+	}
+	#primary,
+	#secondary {
+		width: auto;
+	}
+	#content {
+		margin-top: 0;
+	}
+	#content:before,
+	#content:after {
+		content: '';
+		position: static;
+	}
+	#secondary {
+		padding-top: 0;
+	}
+}
+
+@media screen and (max-width:480px) {
+	#more {
+		display: block;
+		float: left;
+		padding: 0.3em 0.5em;
+	}
+	#page {
+		background-image: none;
+	}
+	#masthead {
+		margin: 0 auto;
+		padding: 1em 1em 0 1em;
+	}
+	#main {
+		font-size: 85%;
+	}
+	#nav-menu-wrapper,
+	.main-navigation {
+		background-image: none;
+		margin: 0;
+	}
 }
