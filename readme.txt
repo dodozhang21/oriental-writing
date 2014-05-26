@@ -3,6 +3,7 @@ Thank you for choosing the Oriental Writing Theme.
 Version History:
 
 version 1.0.0 - Hello world!
+version 1.0.1 - Revamp on the main menu and comment styles. Now requires WP 3.8+ as it's dependent on dashicons.
 
 --------------------------------------------------------------------------------
 For support, 

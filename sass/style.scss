@@ -1,0 +1,555 @@
+/*
+Theme Name: Oriental Writing
+Theme URI: http://pure-essence.net/2013/06/25/child-theme-for-oriental-oriental-writing
+Author: Ying Zhang
+Author URI: http://regretless.com/
+Description: Oriental writing is a child theme for oriental with alternative styling.
+Version: 1.0.1
+Tags: fixed-width, two-columns, threaded-comments, sticky-post, microformats, right-sidebar, yellow, orange, red, custom-menu, editor-style, full-width-template
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+template: oriental
+*/
+
+@import url('../oriental/style.css');
+
+/* =========================================================================
+ *   Oriental Writing
+ * ========================================================================= */
+
+// variables
+$bodyFont: 'Source Sans Pro',Arial,Verdana,Helvetica,sans-serif;
+$fancySerif: 'Satisfy', Garamond,Georgia,serif;
+$headingFont: 'Satisfy',"Helvetica Neue",Helvetica Arial,"Lucida Grande",sans-serif;
+
+$linkColor: #7c7a02;
+$linkHoverColor: #fa0405;
+
+/* customized by pure-essence.net */
+html body {
+	background: #feffef url(images/bk.png) repeat;
+	color: #694f10;
+	font-family: $bodyFont;
+	font-size: 16px;
+}
+
+a {
+	color: $linkColor;
+}
+a:hover {
+	color: $linkHoverColor;
+}
+
+img {
+	border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+	word-wrap: break-word;
+}
+
+.entry-title,
+.entry-content,
+.entry-summary {
+	word-wrap: break-word;
+}
+
+#page {
+	background-image: url(images/meiTop.png);
+	background-repeat: no-repeat;
+	background-position: left -100px;
+	position: relative;
+	&:before {
+		content: url(images/meiLeft.png);
+		position: absolute;
+		bottom: 0;
+		left: -10px;
+		z-index: 10;
+	}
+	&:after {
+		content: url(images/meiLowerRight.png);
+		position: absolute;
+		bottom: 0;
+		right: -200px;
+	}
+}
+
+
+#masthead {
+	width: auto;
+	margin: 0 0 0 200px;
+	position: relative;
+	padding-top: 50px;
+	&:after {
+		content: url(images/cloudsCranes.png);
+		position: absolute;
+		right: -200px;
+		top: 0;
+	}
+	h1.site-title a {
+		color: #000;
+		font-family: 'Molle' !important;
+		font-style:  italic;
+		font-weight: 400;
+	}
+	.site-description {
+		font-family: $fancySerif;
+	}
+
+	section {
+		margin-left: 110px;
+		padding: 1em;
+	}
+}
+
+#nav-menu-wrapper {
+	background: none;
+	.main-navigation {    
+		color: #000;
+		font-family: $headingFont;
+		height: auto;
+		background: none;
+		font-size: 100%;
+		
+		a {
+      color: #000;
+			font-weight: normal;
+      &:hover {
+        background-image: none;
+        text-decoration: underline;
+      }
+    }
+
+
+		
+    ul {
+      li {
+      }
+
+      & > li {
+        background: none;
+        &.current_page_item,
+        &.current-menu-item {
+          & > a {
+            background: none;
+            color: #DC2B63;
+            font-weight: bold;
+            text-decoration: none;
+          }
+        }
+
+        $submenu-size: 180px;
+
+        &:hover > .sub-menu,
+        &:hover > .children {
+          left: 0;
+        }
+        .sub-menu,
+        .children {
+          background-color: rgba(#feffef, .7);
+          &:before {
+						color: #000;
+          }
+          li {
+
+            &.current_page_item,
+            &.current-menu-item {
+              & > a {
+                color: #DC2B63;
+								background: none;
+              }
+            }
+          }
+          a {
+          }
+        }
+      }
+    }
+  }
+	
+}
+
+
+
+small.postmetadata {
+	clear: left;
+	display: block;
+}
+
+#main {
+	background: none;
+	width: auto;
+	padding: 0 0 0 200px;
+}
+
+#primary {
+	width: 627px;
+	float: left;
+	background: none;
+}
+
+article.post {
+	background: none;
+}
+
+#content {
+	background-color: #f8efd3;
+	background-image: none;
+	position: relative;
+	margin-top: 50px;
+	.site-navigation {
+		font-family: $fancySerif;
+		line-height: 2;
+		padding: 0 1em;
+	}
+	&:before {
+		content: url(images/paperTop.png);
+		position: absolute;
+		top: -60px;
+		left: 0;
+	}
+	&:after {
+		content: url(images/paperBottom.png);
+		position: absolute;
+		bottom: -60px;
+		left: 0;
+	}
+}
+
+.page-template-page-nosidebar-php #primary, 
+.attachment #primary, 
+.error404 #primary {
+	width: 627px;
+}
+.page-template-page-nosidebar-php footer#colophon, 
+.attachment footer#colophon, 
+.error404 footer#colophon {
+	margin-left: 339px;
+}
+
+.entry-content {
+	position: relative;
+	.oriental-post-thumbnail {
+		position: absolute;
+		top: 10px;
+		left: -100px;
+	}
+}
+
+.entry-title, .entry-title a {
+	font-family: $headingFont;
+	float: left;
+	text-align: left;
+}
+.entry-title {
+	position: relative;
+}
+.entry-meta {
+	text-align: left;
+}
+.edit-link {
+	float: right;
+}
+article:nth-of-type(odd) .entry-title:after {
+	content: url(images/ducks.png);
+	position: absolute;
+	top: 20px;
+	left: -120px;
+}
+
+blockquote {
+	background-color: rgba(253,251,219,.5);
+	border: 0;
+}
+
+/* Comments */
+
+#comments {
+  background: none;
+  background-color: transparent;
+
+
+  .comments-title,
+  #reply-title {
+    font-family: $headingFont;
+    color: #000;
+  }
+
+  .nocomments {
+    background-color: #DFD797;
+    margin: 0;
+    padding: 1em;
+  }
+
+	.comment-reply-link {
+    color: $linkColor;
+    &:hover {
+      color: $linkHoverColor;
+    }
+  }
+
+	$comment-alt-color: rgba(#A9BEE7,.1);
+  $comment-alt-color-2: rgba(#F52513,.05);
+  $comment-post-author-color: rgba(#F52513, .2);
+
+  .commentlist {
+    & > li {
+      &.comment {
+        background-color: $comment-alt-color;
+        &.thread-odd {
+          background-color: $comment-alt-color-2;
+          & > article > footer {
+            text-shadow: none;
+            &:after {
+              border-bottom-color: $comment-alt-color-2;
+            }
+            a {
+              color: lighten(#A66117, 10%);
+              &:hover {
+                color: #A66117;
+              }
+            }
+          }
+        }
+        &.bypostauthor {
+          background: $comment-post-author-color;
+          & > article > footer {
+            &:after {
+              border-bottom-color: $comment-post-author-color;
+            }
+          }
+        }
+        & > article {
+          & > footer {
+            text-shadow: none;
+            a {
+              color: darken(#A9BEE7, 15%);
+              &:hover {
+                color: darken(#A9BEE7, 15%);
+              }
+            }
+            &:after {
+              border-bottom-color:$comment-alt-color;
+            }
+          }
+        }
+      }
+
+
+      & > .children {
+        li{
+          &.bypostauthor {
+            background: $comment-post-author-color;
+          }
+        }
+      }
+    }
+	}
+
+
+}
+
+#respond {
+  padding: 2em;
+  background-color: transparent;
+  a {
+    color: $linkColor;
+    &:hover {
+      color: $linkHoverColor;
+    }
+  }
+
+}
+
+
+button, input, select, textarea, #s {
+	background: rgba(255,255,255,.5);
+}
+#s {
+	padding: 3px;
+	border-radius: 3px;
+	width: 100%;
+}
+#searchsubmit {
+	display: none;
+}
+.wp-caption {
+	border-color: #d0be90;
+}
+
+h1.page-title {
+	padding: 1em 0.5em 0;
+}
+
+#secondary {
+	margin-left: 650px;
+	padding-top: 230px;
+	width: auto;
+	position: relative;
+	a:hover {
+		text-decoration: underline;
+	}
+	&:after {
+		content: url(images/teaKettle.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	aside {
+		background: none;
+	}
+	h2 {
+		background: none;
+		font-family: $headingFont;
+	}
+}
+
+footer#colophon {
+	background: none;
+	width: 627px;
+	margin: 0 0 0 200px;
+	height: auto;
+	padding-top: 50px;
+	color: #000;
+	font-family: 'Source Sans Pro', Garamond,Georgia,serif;
+	font-size: .9em;
+	a {
+		color: #000;
+	}
+
+}
+
+.site-info {
+	line-height: normal;
+	text-align: center;
+}
+
+
+/* =Media Queries
+----------------------------------------*/
+@media screen and (max-width:990px) {
+	.menu {
+		text-align: center;
+	}
+	.tinynav {
+		display: inline-block;
+	}
+}
+
+/* --- Smartphones and small Tablet PCs --- */
+@media screen and (max-width:760px) {
+	#more {
+		display: block;
+		float: left;
+		padding: 0.3em 0.5em;
+	}
+	#main {
+		padding: 0;
+	}
+	#nav-menu-wrapper {
+		padding-bottom: 20px;
+	}
+	#page {
+		background-position: -50px -100px;
+	}
+	#masthead:after,
+	#page:before,
+	#page:after,
+	article:nth-of-type(2n+1) .entry-title:after {
+		content: '';
+		position: static;
+	}
+	#primary {
+		float: none;
+		margin: 0 auto;
+	}
+	.entry-content .oriental-post-thumbnail {
+		position: static;
+		margin: 10px 0;
+	}
+	#secondary {
+		margin: 0 auto;
+		padding-top: 50px;
+		width: 627px;
+	}
+	#s {
+		width: 80%;
+	}
+	#secondary:after {
+		content: '';
+	}
+	footer#colophon {
+		margin: 0 auto;
+		padding-top: 0;
+		width: auto;
+	}
+}
+
+@media screen and (max-width:650px) {
+	#more {
+		display: block;
+		float: left;
+		padding: 0.3em 0.5em;
+	}
+	#page {
+		background-position: -180px -100px;
+	}
+	#masthead {
+		margin: 0 0 0 180px;
+		padding-top: 40px;
+	}
+	#masthead section {
+		margin-left: 0;
+		padding: 0;
+	}
+	#main {
+		padding: 0;
+	}
+	.menu {
+		padding-top: .9em;
+	}
+	#nav-menu-wrapper {
+		padding-bottom: 0;
+	}
+	#primary,
+	#secondary {
+		width: auto;
+	}
+	#content {
+		margin-top: 0;
+	}
+	#content:before,
+	#content:after {
+		content: '';
+		position: static;
+	}
+	#secondary {
+		padding-top: 0;
+	}
+}
+
+@media screen and (max-width:480px) {
+	#more {
+		display: block;
+		float: left;
+		padding: 0.3em 0.5em;
+	}
+	#page {
+		background-image: none;
+	}
+	#masthead {
+		margin: 0 auto;
+		padding: 1em 1em 0 1em;
+	}
+	.menu {
+		padding: .9em .9em 0 .9em;
+	}
+	#nav-menu-wrapper,
+	.main-navigation {
+		background-image: none;
+		margin: 0;
+	}
+}
