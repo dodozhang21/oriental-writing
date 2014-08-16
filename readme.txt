@@ -4,7 +4,7 @@ Version History:
 
 version 1.0.0 - Hello world!
 version 1.0.1 - Revamp on the main menu and comment styles. Now requires WP 3.8+ as it's dependent on dashicons.
-version 1.0.2 - Responsive improvements: use more device targeting breakpoints.
+version 1.0.3 - Responsive improvements: use more device targeting breakpoints.
 
 --------------------------------------------------------------------------------
 For support, 
