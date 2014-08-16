@@ -4,7 +4,7 @@ Theme URI: http://pure-essence.net/2013/06/25/child-theme-for-oriental-oriental-
 Author: Ying Zhang
 Author URI: http://regretless.com/
 Description: Oriental writing is a child theme for oriental with alternative styling.
-Version: 1.0.1
+Version: 1.0.2
 Tags: fixed-width, two-columns, threaded-comments, sticky-post, microformats, right-sidebar, yellow, orange, red, custom-menu, editor-style, full-width-template
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -61,9 +61,7 @@ textarea {
 }
 
 #page {
-	background-image: url(images/meiTop.png);
-	background-repeat: no-repeat;
-	background-position: left -100px;
+	background: none;
 	position: relative;
 	&:before {
 		content: url(images/meiLeft.png);
@@ -86,9 +84,16 @@ textarea {
 	margin: 0 0 0 200px;
 	position: relative;
 	padding-top: 50px;
+	&:before, &:after {
+		position: absolute;
+	}
+	&:before {
+		content: url(images/meiTop.png);
+		top: -100px;
+		left: -280px;
+	}
 	&:after {
 		content: url(images/cloudsCranes.png);
-		position: absolute;
 		right: -200px;
 		top: 0;
 	}
@@ -433,6 +438,30 @@ footer#colophon {
 
 /* =Media Queries
 ----------------------------------------*/
+
+@media screen and (max-width: 1280px) {
+	#page {
+		background: url(images/meiTop.png) 0 -100px no-repeat;
+		margin-left: -50px;
+	}
+	#masthead {
+		&:before {
+			content: '';
+		}
+	}
+	#nav-menu-wrapper {
+		margin: 0 0 0 120px;
+	}
+}
+@media screen and (max-width: 1106px) {
+	#page {
+		margin-left: -100px;
+	}
+	#secondary {
+		margin-right: -50px;
+	}
+}
+/* --- Smartphones and small Tablet PCs --- */
 @media screen and (max-width:990px) {
 	.menu {
 		text-align: center;
@@ -440,10 +469,6 @@ footer#colophon {
 	.tinynav {
 		display: inline-block;
 	}
-}
-
-/* --- Smartphones and small Tablet PCs --- */
-@media screen and (max-width:760px) {
 	#more {
 		display: block;
 		float: left;
@@ -453,9 +478,11 @@ footer#colophon {
 		padding: 0;
 	}
 	#nav-menu-wrapper {
+		margin: 0 53px 13px;
 		padding-bottom: 20px;
 	}
 	#page {
+		margin-left: 0;
 		background-position: -50px -100px;
 	}
 	#masthead:after,
