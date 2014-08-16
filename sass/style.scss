@@ -31,6 +31,9 @@ html body {
 	color: #694f10;
 	font-family: $bodyFont;
 	font-size: 16px;
+	&.infinite-scroll.neverending {
+		overflow: hidden;
+	}
 }
 
 a {
