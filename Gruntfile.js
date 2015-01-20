@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 options: {
                     //config: 'config.rb'
                     sassDir: 'sass',
-                    cssDir: '../orientalWriting',
+                    cssDir: '../oriental-writing',
 					//cssPath: '',
                     //specify: 'sass/**/*.scss',
                     outputStyle: 'compact',
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 		compress: {
 			release: {
 				options: {
-				  archive: 'orientalWriting.zip'
+				  archive: 'oriental-writing.zip'
 				},
 				files: [
 				  {src: ['images/**'

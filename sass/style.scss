@@ -4,7 +4,7 @@ Theme URI: http://pure-essence.net/2013/06/25/child-theme-for-oriental-oriental-
 Author: Ying Zhang
 Author URI: http://regretless.com/
 Description: Oriental writing is a child theme for oriental with alternative styling.
-Version: 1.0.3
+Version: 1.0.4
 Tags: responsive-layout, two-columns, threaded-comments, sticky-post, microformats, right-sidebar, yellow, orange, red, custom-menu, editor-style, full-width-template
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -41,6 +41,15 @@ a {
 }
 a:hover {
 	color: $linkHoverColor;
+}
+
+table { /* tables still need 'cellspacing="0"' in the markup */
+  th, td {
+	border-color: rgba(#3A3A3A, 0.5);
+  }
+  th {
+	background-color: rgba(253, 251, 219, 0.5);
+  }
 }
 
 img {
